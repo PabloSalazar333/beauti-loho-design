@@ -1,19 +1,19 @@
 import React from 'react';
-import { Contact } from '../../models/contact';
+import { Contact } from '../../models/contact.class';
 import ContactComponent from '../pure/forms/contact';
 
 
 const ContactListComponet = () => {
 
-    const defaultContac = new Contact('Default name','Default last name','default@email.com',false)
+    const defaultContact = new Contact('Default name', 'Default last name', 'default@email.com', false);
 
     return (
         <div>
             <div>
                 <h1>
-                    Your Contak: 
+                    Your Contact:
                 </h1>
-                <ContactComponent contacto={defaultContac}></ContactComponent>
+                <ContactComponent contacto={defaultContact}></ContactComponent>
             </div>
         </div>
     );
