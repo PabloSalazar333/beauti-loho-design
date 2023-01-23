@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
+import logo from '../../../assets/img/logo.png'
 import CardWidget from './CardWidget'
 
 function NavBar() {
@@ -12,7 +13,9 @@ function NavBar() {
   return (
     <>
       <NavContainer>
-        <h2>Beauty Logo Design</h2>
+        <a href='#inicio' className='logoContainer'>
+          <img src={logo} alt='logo' className='logo' />
+        </a>
         <div className={`links ${clicked ? 'active' : ''}`}>
           <a href='/'>INICIO</a>
           <a onClick={handleClick} href='/'>PRODUCTOS</a>
@@ -55,7 +58,7 @@ const NavContainer = styled.nav`
     text-align: center;
     transition: all .5s ease;
     a{
-      color: white;
+      color: #fff3fb;
       font-size: 2rem;
       display: block;
     }
